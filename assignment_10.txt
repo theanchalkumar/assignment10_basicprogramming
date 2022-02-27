@@ -1,0 +1,140 @@
+1.
+
+total = 0
+ 
+# creating a list
+list1 = [11, 5, 17, 18, 23]
+ 
+# Iterate each element in list
+# and add them in variable total
+for ele in range(0, len(list1)):
+    total = total + list1[ele]
+ 
+# printing total value
+print("Sum of all elements in given list: ", total)
+
+2.
+
+def multiplyList(myList) :
+     
+    # Multiply elements one by one
+    result = 1
+    for x in myList:
+         result = result * x
+    return result
+
+3.
+
+list1 = [10, 20, 4, 45, 99]
+ 
+# sorting the list
+list1.sort()
+ 
+# printing the first element
+print("Smallest element is:", *list1[:1])
+
+4.
+
+list1 = [10, 20, 4, 45, 99]
+  
+# sorting the list
+list1.sort()
+  
+# printing the last element
+print("Largest element is:", list1[-1])
+
+5.
+
+list1 = [10, 20, 4, 45, 99]
+ 
+mx=max(list1[0],list1[1])
+secondmax=min(list1[0],list1[1])
+n =len(list1)
+for i in range(2,n):
+    if list1[i]>mx:
+        secondmax=mx
+        mx=list1[i]
+    elif list1[i]>secondmax and \
+        mx != list1[i]:
+        secondmax=list1[i]
+ 
+print("Second highest number is : ",\
+      str(secondmax))
+
+6.
+
+# Python program to find N largest
+# element from given list of integers
+  
+# Function returns N largest elements
+def Nmaxelements(list1, N):
+    final_list = []
+  
+    for i in range(0, N): 
+        max1 = 0
+          
+        for j in range(len(list1)):     
+            if list1[j] > max1:
+                max1 = list1[j];
+                  
+        list1.remove(max1);
+        final_list.append(max1)
+          
+    print(final_list)
+
+7.
+
+list1 = [10, 21, 4, 45, 66, 93]
+ 
+# iterating each number in list
+for num in list1:
+ 
+    # checking condition
+    if num % 2 == 0:
+        print(num, end=" ")
+
+8.
+
+list1 = [10, 21, 4, 45, 66, 93]
+  
+# iterating each number in list
+for num in list1:
+      
+    # checking condition
+    if num % 2 != 0:
+       print(num, end = " ")
+
+9.
+
+test_list = [5, 6, [], 3, [], [], 9]
+  
+# printing original list 
+print("The original list is : " + str(test_list))
+  
+# Remove empty List from List
+# using list comprehension
+res = [ele for ele in test_list if ele != []]
+  
+# printing result 
+print ("List after empty list removal : " + str(res))
+
+10.
+
+# Using the Slice Operator
+def Cloning(li1):
+    li_copy = li1[:]
+    return li_copy
+
+11.
+
+def countX(lst, x):
+    count = 0
+    for ele in lst:
+        if (ele == x):
+            count = count + 1
+    return count
+ 
+# Driver Code
+lst = [8, 6, 8, 10, 8, 20, 10, 8, 8]
+x = 8
+print('{} has occurred {} times'.format(x, countX(lst, x)))
